@@ -4,7 +4,7 @@ metadata:
   name: nginx-pod
 spec:
   containers:
-    - name: nginx_container
+    - name: nginx-cont
       image: nginx:latest
       ports:
         - containerPort: 80
