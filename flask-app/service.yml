@@ -10,6 +10,8 @@ spec:
     app: flask-app-label
   ports:
     - protocol: TCP
+    # this is conatiner port
       port: 80
+    # this is service port
       targetPort: 80
   
