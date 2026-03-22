@@ -9,17 +9,21 @@ metadata:
     name: flask-app-label
 
 spec:
+
+# This will create 3 replicas with labels that match flask app label 
   replicas: 3
   selector:
     matchLabels:
       app: flask-app-label
+  
+  # This is pod template
   template:
     metadata:
       labels:
         app: flask-app-label
     spec:
       containers:
-      - name: flask-app-cont
-      image: sandippatil6696/pyton-flask-app-github-actions:latest
-      ports:
-      - containerPort: 80
+        - name: flask-app-cont
+          image: sandippatil6696/pyton-flask-app-github-actions:latest
+          ports:
+            - containerPort: 80
