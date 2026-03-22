@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 
 metadata:
-  name: flask-app-Service
+  name: flask-app-service
   namespace: flask-app-ns
 
 spec:
