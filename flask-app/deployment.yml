@@ -1,0 +1,30 @@
+kind: Deployment
+apiVersion: apps/v1
+
+metadata:
+  name: flask-app-deployment
+  namespace: flask-app-ns 
+  labels:
+    name: flask-app-label
+
+spec:
+
+  # to create a replica of your pod matching with label flask-app-label
+  replicas: 3 
+  selector:
+    matchLabels:
+      app: flask-app-label
+
+
+  # pod template
+  template:
+    metadata:
+      labels:
+        app: flask-app-label 
+    spec:
+      containers:
+      - name: flask-app-cont
+      image: sandippatil6696/pyton-flask-app-github-actions:latest
+      ports:
+      - containerPort: 80
+      

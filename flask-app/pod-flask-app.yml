@@ -3,7 +3,7 @@ apiVersion: v1
 
 metadata:
   name: flask-app-pod
-  namespace: flsak-app-ns 
+  namespace: flask-app-ns 
 
 spec:
   containers:
