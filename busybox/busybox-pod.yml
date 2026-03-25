@@ -2,7 +2,7 @@ kind: Pod
 apiVersion: v1
 
 metadata:
-  name: busybox-Pod
+  name: busybox-pod
   labels:
     app: busybox-label
 
