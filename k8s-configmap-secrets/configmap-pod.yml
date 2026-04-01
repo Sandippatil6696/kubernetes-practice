@@ -1,0 +1,23 @@
+kind: Pod
+apiVersion: v1
+
+metadata:
+  name: configmap-pod
+  labels:
+    app: configmap-label
+
+spec:
+  containers:
+    - name: busybox-cont
+      image: busybox:latest
+      envFrom:
+        - configMapRef:
+            name: app-config
+      command: [ "/bin/sh", "-c" ]
+      args:
+        - echo "APP_ENV=$APP_ENV";
+          echo "APP_DEBUG=$APP_DEBUG";
+          echo "APP_PORT=$APP_PORT";
+          sleep 3600;
+
+  
