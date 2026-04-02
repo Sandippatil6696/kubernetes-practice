@@ -8,7 +8,7 @@ spec:
   storageClassName: manual
   resources:
     requests:
-      storage: 500Mi
-  selector:
-    matchLabels:
-      app: pv-app
+      storage: 1Gi
+  # selector:
+  #   matchLabels:
+  #     app: pv-app
