@@ -15,7 +15,7 @@ spec:
       - name: busybox-pv
         mountPath: /data/
 
-  volume:
+  volumes:
     - name: busybox-pv
       persistentVolumeClaim:
         claimName: my-pvc
