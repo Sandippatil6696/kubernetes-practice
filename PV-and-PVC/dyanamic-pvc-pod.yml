@@ -19,4 +19,4 @@ spec:
   volumes:
     - name: dynmaic-pv
       persistentVolumeClaim:
-        claimName: dynmaic-provising-pvc
+        claimName: defualt-standard-pvc
