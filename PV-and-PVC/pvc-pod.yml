@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox-pod
+  labels:
+spec:
+  containers:
+  - name: busybox
+    image: busybox:latest
+    command: ["/bin/sh", "-c" ]
+    args:
+      - |
+        echo "hii i am sandip" >> /data/message.txt;
+    volumeMounts:
+      - name: busybox-pv
+        mountPath: /data/
+
+  volume:
+    - name: busybox-pv
+      persistentVolumeClaim:
+        claimName: my-pvc
