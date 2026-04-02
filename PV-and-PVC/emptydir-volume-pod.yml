@@ -8,10 +8,9 @@ spec:
       image: busybox:latest
       command: ["/bin/sh", "-c"]
       args:
-        - while true; do
-            date >> /data/message.txt;
-            sleep 5;
-          done
+        - |
+          date >> /data/message.txt;
+          sleep 5;
       volumeMounts:
         - name: data-volume
           mountPath: /data
