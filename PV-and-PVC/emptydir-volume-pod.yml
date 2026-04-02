@@ -10,7 +10,7 @@ spec:
       args:
         - |
           date >> /data/message.txt;
-          sleep 5;
+          sleep 3600;
       volumeMounts:
         - name: data-volume
           mountPath: /data
