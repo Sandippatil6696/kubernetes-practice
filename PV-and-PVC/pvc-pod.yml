@@ -10,7 +10,10 @@ spec:
     command: ["/bin/sh", "-c" ]
     args:
       - |
-        echo "hii i am sandip" >> /data/message.txt;
+        while true; do
+          echo "hii i am sandip" >> /data/message.txt;
+          sleep 5;
+        done
     volumeMounts:
       - name: busybox-pv
         mountPath: /data/
