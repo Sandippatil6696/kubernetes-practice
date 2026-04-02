@@ -11,10 +11,10 @@ spec:
     args:
       - |
         echo "hii i am sandip" >> /data/message.txt;
-        sleep 5;
+        sleep 3600;
     volumeMounts:
       - name: busybox-pv
-        mountPath: /data/
+        mountPath: /data
 
   volumes:
     - name: busybox-pv
