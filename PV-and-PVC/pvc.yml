@@ -9,6 +9,6 @@ spec:
   resources:
     requests:
       storage: 500Mi
-    selector:
-      matchLabels:
-        app: pv-app
+  selector:
+    matchLabels:
+      app: pv-app
