@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dynmaic-pvc-pod
+  labels:
+spec:
+  containers:
+  - name: busybox-con
+    image: busybox:latest
+    command: ["/bin/sh", "-c" ]
+    args:
+      - |
+        echo "welcome to devops" >> /data/demo.txt;
+        sleep 3600;
+    volumeMounts:
+      - name: dynmaic-pv
+        mountPath: /data
+
+  volumes:
+    - name: dynmaic-pv
+      persistentVolumeClaim:
+        claimName: dynmaic-provising-pvc
