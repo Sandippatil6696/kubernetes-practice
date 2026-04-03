@@ -22,8 +22,8 @@ spec:
             - cat
             - /tmp/started
         periodSeconds: 5
-        failureThreshold: 12   #  12 × 5 = 60 seconds budget
-
+        failureThreshold: 2   #  2 × 5 = 10 seconds budget
+        # failureThreshold: 12   #  12 × 5 = 60 seconds budget
       livenessProbe:
         exec:
           command:
