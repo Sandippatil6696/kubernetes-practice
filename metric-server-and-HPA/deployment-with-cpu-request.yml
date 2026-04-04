@@ -1,9 +1,9 @@
-kind: apps/v1
-apiVersion: Deployment
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: apache-cpu-request-Deployment
-  label: apache-label
-
+  labels: 
+    app: apache-label
 spec:
   replicas: 2
   selector:
