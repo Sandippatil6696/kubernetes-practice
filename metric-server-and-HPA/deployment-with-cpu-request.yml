@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: apache-cpu-request-Deployment
+  name: apache-cpu-request-deployment
   labels: 
     app: apache-label
 spec:
