@@ -1,0 +1,25 @@
+kind: apps/v1
+apiVersion: Deployment
+metadata:
+  name: apache-cpu-request-Deployment
+  label: apache-label
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: apache-pod-lbl
+  template:
+    metadata:
+      labels:
+        app: apache-pod-lbl
+    spec:
+      containers:
+        - name: apache-container
+          image: registry.k8s.io/hpa-example
+          containerport: 80
+          resources:
+            requests:
+              cpu: "200m"
+            limits:
+              cpu: "500m"
