@@ -15,6 +15,7 @@ spec:
     spec:
       containers:
         - name: wordpress
+          imagePullPolicy: IfNotPresent
           image: wordpress:latest
           ports:
             - containerPort: 80
