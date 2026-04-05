@@ -22,7 +22,7 @@ spec:
         volumeMounts:
         - name: mysql-vol
           mountPath: /var/lib/mysql
-        envfrom:
+        envFrom:
         - secretRef:
             name: db-secret
         resources:
