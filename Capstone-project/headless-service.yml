@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: headless-service
+  namespace: capstone
+spec:
+  clusterIP: None
+  selector:
+    app: capstone-app
+  ports:
+    - port: 3306
+      targetPort: 3306
+      
