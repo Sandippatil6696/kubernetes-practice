@@ -3,7 +3,6 @@ apiVersion: apps/v1
 metadata:
   name: mysql-statefulset
   namespace: capstone
-
 spec:
   selector:
     matchLabels:
