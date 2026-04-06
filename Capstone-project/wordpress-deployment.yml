@@ -17,7 +17,7 @@ spec:
       initContainers:
       - name: wait-for-mysql
         image: busybox:1.36
-        command: ["/bin/sh", "-c", "until nc -z mysql-statefulset-0.headless-service.capstone.svc.cluster.local 3306; do sleep 2; done"]
+        command: ["/bin/sh", "-c", "until nc -z headless-service.capstone.svc.cluster.local 3306; do sleep 2; done"]
         resources:
           requests:
             memory: "32Mi"
