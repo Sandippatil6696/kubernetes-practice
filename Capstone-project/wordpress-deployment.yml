@@ -13,6 +13,19 @@ spec:
       labels:
         app: wordpress
     spec:
+
+      initContainers:
+      - name: wait-for-mysql
+        image: busybox:1.36
+        command: ["/bin/sh", "-c", "until nc -z headless-service 3306; do sleep 2; done"]
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "50m"
+          limits:
+            memory: "64Mi"
+            cpu: "100m"
+
       containers:
         - name: wordpress
           imagePullPolicy: IfNotPresent
